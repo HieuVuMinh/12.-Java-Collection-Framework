@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/12. Java Collection Framework.iml" filepath="$PROJECT_DIR$/.idea/12. Java Collection Framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/[Bai tap] Luyen tap su dung ArrayList, LinkedList trong Java Collection Framework/[Bai tap] Luyen tap su dung ArrayList, LinkedList trong Java Collection Framework.iml" filepath="$PROJECT_DIR$/[Bai tap] Luyen tap su dung ArrayList, LinkedList trong Java Collection Framework/[Bai tap] Luyen tap su dung ArrayList, LinkedList trong Java Collection Framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/[Thuc hanh] Phan biet giua HashMap và HashSet/[Thuc hanh] Phan biet giua HashMap và HashSet.iml" filepath="$PROJECT_DIR$/[Thuc hanh] Phan biet giua HashMap và HashSet/[Thuc hanh] Phan biet giua HashMap và HashSet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/[Thuc hanh] Sap xep voi Comparable và Comparator/[Thuc hanh] Sap xep voi Comparable và Comparator.iml" filepath="$PROJECT_DIR$/[Thuc hanh] Sap xep voi Comparable và Comparator/[Thuc hanh] Sap xep voi Comparable và Comparator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/[Thuc hanh] Su dung HashMap, LinkedHashMap, TreeMap/[Thuc hanh] Su dung HashMap, LinkedHashMap, TreeMap.iml" filepath="$PROJECT_DIR$/[Thuc hanh] Su dung HashMap, LinkedHashMap, TreeMap/[Thuc hanh] Su dung HashMap, LinkedHashMap, TreeMap.iml" />
+    </modules>
+  </component>
+</project>

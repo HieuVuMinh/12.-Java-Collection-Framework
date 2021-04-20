@@ -1,6 +1,24 @@
 import java.util.*;
 
 public class ProductManament {
+    public static final String inputIdProduct = "Nhập id sản phẩm: ";
+    public static final String addArrayList = "1. Thêm vào Array List";
+    public static final String addLinkedList = "2. Thêm vào Linked List";
+    public static final String inputNameProduct = "Nhập tên sản phẩm: ";
+    public static final String inputPriceProduct = "Nhập giá tiền: ";
+    public static final String removeProductInArrayList = "1. Xóa product trong Array List";
+    public static final String removeProductInLinkedList = "2. Xóa product trong Linked List";
+    public static final String notFoundProduct = "Không tìm thấy sản phẩm tương ứng";
+    public static final String fixInfoProductInArrayList = "1. Sửa thông tin sản phẩm mảng Array List";
+    public static final String fixInfoProductInLinkedList = "2. Sửa thông tin sản phẩm mảng Linked List";
+    public static final String fixNameProduct = "1. Sửa tên sản phẩm";
+    public static final String fixIdProduct = "2. Sửa mã sản phẩm";
+    public static final String fixPricrProduct = "3. Sửa giá sản phẩm";
+    public static final String inputNameAgain = "Nhập lại tên: ";
+    public static final String inputIdAgain = "Nhập lại mã: ";
+    public static final String inputPriceAgain = "Nhập lại giá: ";
+    public static final String sortProductInArrayList = "1. Sắp xếp mảng Array List giảm dần theo giá";
+    public static final String sortProductInLinkedList = "2. Sắp xếp mảng Linked List tăng dần theo giá";
     Scanner sc = new Scanner(System.in);
 
     List<Product> productList = new ArrayList<>();
@@ -24,7 +42,7 @@ public class ProductManament {
     // Nhập ID sản phẩm
     private static String inputID(Scanner sc) {
         sc.nextLine();
-        System.out.println("Nhập tên id sản phẩm: ");
+        System.out.println(inputIdProduct);
         return sc.nextLine();
     }
 
@@ -44,8 +62,8 @@ public class ProductManament {
 
     // Thêm sản phẩm
     public void addProduct() {
-        System.out.println("1. Thêm vào Array List");
-        System.out.println("2. Thêm vào Linked List");
+        System.out.println(addArrayList);
+        System.out.println(addLinkedList);
         int selection = sc.nextInt();
         switch (selection) {
             case 1: {
@@ -63,11 +81,11 @@ public class ProductManament {
 
     private Product inputInfoProduct() {
         sc.nextLine();
-        System.out.println("Nhập tên sản phẩm: ");
+        System.out.println(inputNameProduct);
         String name = sc.nextLine();
-        System.out.println("Nhập id sản phẩm: ");
+        System.out.println(inputIdProduct);
         String id = sc.nextLine();
-        System.out.println("Nhập giá tiền: ");
+        System.out.println(inputPriceProduct);
         double price = sc.nextDouble();
         Product product = new Product(name, id, price);
         return product;
@@ -75,8 +93,8 @@ public class ProductManament {
 
     // Xóa product trong array
     public void removeProduct() {
-        System.out.println("1. Xóa product trong Array List");
-        System.out.println("1. Xóa product trong Linked List");
+        System.out.println(removeProductInArrayList);
+        System.out.println(removeProductInLinkedList);
         int selection = sc.nextInt();
         switch (selection) {
             case 1: {
@@ -96,7 +114,7 @@ public class ProductManament {
     public void removeProductArrayList(String id) {
         Product product = findElementArrayListById(id);
         if (product == null) {
-            System.out.println("Không tìm thấy sản phẩm tương ứng");
+            System.out.println(notFoundProduct);
         } else {
             productList.remove(product);
         }
@@ -122,7 +140,7 @@ public class ProductManament {
     public void removeProductLinkedList(String id) {
         Product product = findElementLinkedListById(id);
         if (product == null) {
-            System.out.println("Không tìm thấy sản phẩm tương ứng");
+            System.out.println(notFoundProduct);
         } else {
             productList.remove(product);
         }
@@ -146,8 +164,8 @@ public class ProductManament {
 
     // Sửa thông tin sản phẩm
     public void fixProduct() {
-        System.out.println("1. Sửa thông tin sản phẩm mảng Array List");
-        System.out.println("2. Sửa thông tin sản phẩm mảng Linked List");
+        System.out.println(fixInfoProductInArrayList);
+        System.out.println(fixInfoProductInLinkedList);
         int selection = sc.nextInt();
         switch (selection) {
             case 1: {
@@ -177,30 +195,30 @@ public class ProductManament {
 
     private void fixProductById(Product product) {
         if (product == null) {
-            System.out.println("Không tìm thấy sản phẩm tương ứng");
+            System.out.println(notFoundProduct);
         } else {
-            System.out.println("1. Sửa tên sản phẩm");
-            System.out.println("2. Sửa mã sản phẩm");
-            System.out.println("3. Sửa giá sản phẩm");
+            System.out.println(fixNameProduct);
+            System.out.println(fixIdProduct);
+            System.out.println(fixPricrProduct);
             int selection = sc.nextInt();
             switch (selection) {
                 case 1: {
                     sc.nextLine();
-                    System.out.println("Nhập lại tên: ");
+                    System.out.println(inputNameAgain);
                     String name = sc.nextLine();
                     product.setName(name);
                     break;
                 }
                 case 2: {
                     sc.nextLine();
-                    System.out.println("Nhập lại mã: ");
+                    System.out.println(inputIdAgain);
                     String code = sc.nextLine();
                     product.setId(code);
                     break;
                 }
                 case 3: {
                     sc.nextLine();
-                    System.out.println("Nhập lại giá: ");
+                    System.out.println(inputPriceAgain);
                     double price = sc.nextDouble();
                     product.setPrice(price);
                 }
@@ -209,8 +227,8 @@ public class ProductManament {
     }
     // Sắp xếp mảng
     public void sortArray(){
-        System.out.println("1. Sắp xếp mảng Array List giảm dần theo giá");
-        System.out.println("2. Sắp xếp mảng Linked List tăng dần theo giá");
+        System.out.println(sortProductInArrayList);
+        System.out.println(sortProductInLinkedList);
         int selection = sc.nextInt();
         switch (selection){
             case 1:{
